@@ -1,0 +1,14 @@
+prefix=/Users/apple/Documents/projects/aibuild/workspace
+exec_prefix=${prefix}
+libdir=/Users/apple/Documents/projects/aibuild/workspace/lib
+includedir=/Users/apple/Documents/projects/aibuild/workspace/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 58.12.100
+Requires: libavfilter >= 7.107.100, libswscale >= 5.8.100, libpostproc >= 55.8.100, libavformat >= 58.69.100, libavcodec >= 58.128.100, libswresample >= 3.8.100, libavutil >= 56.66.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavdevice -framework Foundation -framework AudioToolbox -framework CoreAudio -lm -framework AVFoundation -framework CoreVideo -framework CoreMedia -framework CoreGraphics -framework AudioToolbox -pthread
+Libs.private: 
+Cflags: -I${includedir}

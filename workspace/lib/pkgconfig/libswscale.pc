@@ -1,0 +1,14 @@
+prefix=/Users/apple/Documents/projects/aibuild/workspace
+exec_prefix=${prefix}
+libdir=/Users/apple/Documents/projects/aibuild/workspace/lib
+includedir=/Users/apple/Documents/projects/aibuild/workspace/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 5.8.100
+Requires: libavutil >= 56.66.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswscale -lm
+Libs.private: 
+Cflags: -I${includedir}

@@ -1,0 +1,14 @@
+prefix=/Users/apple/Documents/projects/aibuild/workspace
+exec_prefix=${prefix}
+libdir=/Users/apple/Documents/projects/aibuild/workspace/lib
+includedir=/Users/apple/Documents/projects/aibuild/workspace/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 58.69.100
+Requires: libavcodec >= 58.128.100, libswresample >= 3.8.100, libavutil >= 56.66.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavformat -lm -lbz2 -lz -Wl,-framework,CoreFoundation -Wl,-framework,Security
+Libs.private: 
+Cflags: -I${includedir}

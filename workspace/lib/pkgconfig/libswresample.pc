@@ -1,0 +1,14 @@
+prefix=/Users/apple/Documents/projects/aibuild/workspace
+exec_prefix=${prefix}
+libdir=/Users/apple/Documents/projects/aibuild/workspace/lib
+includedir=/Users/apple/Documents/projects/aibuild/workspace/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 3.8.100
+Requires: libavutil >= 56.66.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswresample -lm
+Libs.private: 
+Cflags: -I${includedir}
