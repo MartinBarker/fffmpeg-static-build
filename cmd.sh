@@ -48,12 +48,15 @@ echo "Building..."
 # Min electron supported version
 MACOS_MIN="10.10"
 
+# Add the following line to set the path to the static libmp3lame library
+export LAME_PATH="/usr/local/opt/lame/lib/libmp3lame.0.dylib"
+
 ./configure $ADDITIONAL_CONFIGURE_OPTIONS \
     --pkgconfigdir="$WORKSPACE/lib/pkgconfig" \
     --prefix=${WORKSPACE} \
     --pkg-config-flags="--static" \
-    --extra-cflags="-I$WORKSPACE/include -mmacosx-version-min=${MACOS_MIN} -I$PACKAGES/lame-${LIBMP3LAME_VERSION}/include" \
-    --extra-ldflags="-L$WORKSPACE/lib -mmacosx-version-min=${MACOS_MIN} -L$PACKAGES/lame-${LIBMP3LAME_VERSION}/lib" \
+    --extra-cflags="-I$WORKSPACE/include -mmacosx-version-min=${MACOS_MIN} -I$PACKAGES/lame-${LIBMP3LAME_VERSION}/include -I$PREFIX/include -I$LAME_PATH" \
+    --extra-ldflags="-L$WORKSPACE/lib -mmacosx-version-min=${MACOS_MIN} -L$PACKAGES/lame-${LIBMP3LAME_VERSION}/lib -L$PREFIX/lib -L$LAME_PATH/.libs" \
     --extra-libs="-lpthread -lm" \
     --enable-static \
     --disable-shared \

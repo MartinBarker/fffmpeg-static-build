@@ -1,7 +1,7 @@
-prefix=/Users/apple/Documents/projects/aibuild/workspace
+prefix=/Users/apple/Documents/projects/fffmpeg-static-build/workspace
 exec_prefix=${prefix}
-libdir=/Users/apple/Documents/projects/aibuild/workspace/lib
-includedir=/Users/apple/Documents/projects/aibuild/workspace/include
+libdir=/Users/apple/Documents/projects/fffmpeg-static-build/workspace/lib
+includedir=/Users/apple/Documents/projects/fffmpeg-static-build/workspace/include
 
 Name: libavformat
 Description: FFmpeg container format library
